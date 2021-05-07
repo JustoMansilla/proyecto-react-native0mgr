@@ -1,21 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import React, { Component } from 'react';
+import {
+  Text,
+  View,
+  Button,
+  SafeAreaView
+} from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        contador: 0,
+      }
+    }
+
+    render(){
+      return(
+
+        <SafeAreaView>
+          <Text>Contador: {this.state.contador}</Text>
+          <Button title="Sumar" onPress={() => {this.setState({contador: this.state.contador + 1})}}/>
+          <Button title="Restar" onPress={() => {this.setState({contador: this.state.contador - 1})}}/>
+          <Button title="Resetear" onPress={() => {this.setState({contador: this.state.contador = 0})}}/>
+        </SafeAreaView>
+
+        
+
+      );
+    }
+};
+
+
+
+   
+  
+
+
