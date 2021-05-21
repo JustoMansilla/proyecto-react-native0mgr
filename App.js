@@ -5,7 +5,8 @@ import {
   Image,
   Button,
   SafeAreaView,
-  Alert
+  Alert,
+  View
 } from 'react-native';
 
 export default class App extends Component {
@@ -33,7 +34,12 @@ export default class App extends Component {
     render(){
       return(
 
-        <SafeAreaView>
+        <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
+          
+            <View style={{backgroundColor: 'red', flex: 1}}></View>
+            <View style={{backgroundColor: 'blue', flex: 1}}></View>
+            <View style={{backgroundColor: 'green', flex: 1}}></View>
+
           <Text>Contador: {this.state.contador}</Text>
           <Button title="Sumar" onPress={() => {this.setState({contador: this.state.contador + 1})}}/>
           <Button title="Restar" onPress={() => {this.setState({contador: this.state.contador - 1})}}/>
