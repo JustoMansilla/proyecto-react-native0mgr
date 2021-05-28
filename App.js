@@ -6,7 +6,8 @@ import {
   Button,
   SafeAreaView,
   Alert,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -32,6 +33,14 @@ export default class App extends Component {
       }
     }
 
+    async storageString(value){
+      try {
+        await AsyncStorage.setItem('@MyString',value)
+      } catch (error){
+        console.log(error);
+      }
+    }
+
    
 
     async removeItem(key) {
@@ -42,18 +51,6 @@ export default class App extends Component {
       }
     }
     
-    // const ArticlesFromApi = async () => {
-    //   try {
-    //     let respuesta = await fetch(
-    //       "https://randomuser.me/api/"
-    //     );
-       
-    //   } catch (error) {
-    //      console.error(error);
-    //   }
-    // };
-
-
 
 
 
@@ -62,6 +59,10 @@ export default class App extends Component {
         <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
 
         <Text> hola </Text>
+
+        <TouchableOpacity onPress={() => this.storageString('Aca va un string o algo de la API')}> 
+          <Text> Guardar string </Text>
+        </TouchableOpacity>
         
         </SafeAreaView>
         
