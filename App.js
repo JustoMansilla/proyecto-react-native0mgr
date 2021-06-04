@@ -87,16 +87,6 @@ export default class App extends Component {
       }
     }
 
-    async getApi () {
-      try {
-        let respuesta = await fetch("https://randomuser.me/api/");
-      }catch (error) {
-        console.log(error);
-      }
-    }
-    
-
-
 
     render(){
 
