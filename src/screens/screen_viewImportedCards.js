@@ -21,7 +21,7 @@ class screen_viewImportedCards extends Component {
    componentDidMount(){
 
    }
-   async getData (){
+   async getDataStorage(){
        try {
            const resultado = await AsyncStorage.getItem('Users');
            this.setState({importedUsers:JSON.parse(resultado)});

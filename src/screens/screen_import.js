@@ -19,10 +19,10 @@ class screen_import extends Component {
     }
 
 componentDidMount() {
-fetch('https://randomuser.me/api?results=10')
-.then ( response => response.json() )
-.then (result=>{
-    this.setState({users: result.results});
+    fetch('https://randomuser.me/api?results=10')
+    .then ( response => response.json() )
+    .then (result=>{
+        this.setState({users: result.results});
 })
 }
 
@@ -35,6 +35,7 @@ try {
     console.log(error);
         }
     }
+
 render(){
     const values = this.state.users.map (item =>
         <Text key={item.login.uuid}

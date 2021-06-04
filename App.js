@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getData } from './src/api/api';
+import { getData, getDataFetch } from './src/api/api';
 
 export default class App extends Component {
     constructor(props) {
@@ -90,7 +90,7 @@ export default class App extends Component {
 
     async getApi () {
       try {
-        let respuesta = await getData();
+        let respuesta = await getDataFetch();
       }catch (error) {
         console.log(error);
       }
