@@ -12,6 +12,9 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getData, getDataFetch } from './src/api/api';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default class App extends Component {
     constructor(props) {
@@ -105,6 +108,8 @@ export default class App extends Component {
 
       return(
 
+        <NavigationContainer>
+
         <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
 
         <Text> {saludo} </Text>
@@ -121,6 +126,7 @@ export default class App extends Component {
         
         </SafeAreaView>
         
+        </NavigationContainer>
 
   
       )
