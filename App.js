@@ -118,7 +118,7 @@ export default class App extends Component {
           <Text> Guardar Saludo (string) </Text>
         </TouchableOpacity>
 
-        <Text>  ${objeto.nombre} ${objeto.apellido} </Text>
+        <Text>{'${objeto.nombre} ${objeto.apellido}'}</Text>
 
         <TouchableOpacity onPress={() => this.storageObject({nombre: 'Justo', apellido: 'Mansilla'})}> 
           <Text> Guardar Nombre (objeto literal)</Text>
