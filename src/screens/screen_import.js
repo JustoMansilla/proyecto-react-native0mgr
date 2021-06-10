@@ -17,7 +17,7 @@ class screen_import extends Component {
            users: []
         }
     }
-//traemos la api
+
 componentDidMount() {
     fetch('https://randomuser.me/api?results=10')
     .then ( response => response.json() )
@@ -25,7 +25,7 @@ componentDidMount() {
         this.setState({users: result.results});
 })
 }
-// la guardamos en el async storage
+
 async storeData(){
 try {
     const jsonUsers = JSON.stringify(this.state.users);
