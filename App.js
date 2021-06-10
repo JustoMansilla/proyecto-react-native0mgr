@@ -13,8 +13,8 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getData, getDataFetch } from './src/api/api';
 import 'react-native-gesture-handler';
+import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 export default class App extends Component {
     constructor(props) {
@@ -125,7 +125,7 @@ export default class App extends Component {
         </TouchableOpacity>
         
         </SafeAreaView>
-
+        
         </NavigationContainer>
 
   
