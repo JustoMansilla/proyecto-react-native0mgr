@@ -30,25 +30,25 @@ class screen_viewImportedCards extends Component {
            console.log(error)
        }
    }
-
+//recuperar las tarjetas que guardamos en el async storage
    render(){
        const values = this.state.importedUsers.map( item =>
         <Text key={item.login.uuid}
         style= {{fontSize: 20}}>{item.name.first}</Text>
         )
-    // return (
-    //     <View> 
-    //         <Text> Mostramos los valores importados</Text>
-    //         {values}
-    //         <TouchableOpacity onPress={ this.getDataStorage.bind (this)}>
-    //             <View> <Text> recuperar datos</Text></View>
-    //         </TouchableOpacity>
+     return (
+         <View> 
+         <Text> Mostramos los valores importados</Text>
+             {values}
+             <TouchableOpacity onPress={ this.getDataStorage.bind (this)}>
+             <View> <Text> recuperar datos</Text></View>
+            </TouchableOpacity>
 
-    //         <TouchableOpacity onPress= { () => this.setState({importedUsers: []})}>
-    //             <View> <Text> Borrar datos importados</Text></View>
-    //         </TouchableOpacity>
-    //     </View>
-    // )
+            <TouchableOpacity onPress= { () => this.setState({importedUsers: []})}>
+                 <View> <Text> Borrar datos importados</Text></View>
+             </TouchableOpacity>
+         </View>
+    )
    }
 }
 export {screen_viewImportedCards}

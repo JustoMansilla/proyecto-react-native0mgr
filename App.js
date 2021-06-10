@@ -15,6 +15,8 @@ import { getData, getDataFetch } from './src/api/api';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { screen_viewImportedCards } from './src/screens/screen_viewImportedCards';
+import { screen_import } from './src/screens/screen_import';
 
 export default class App extends Component {
     constructor(props) {
@@ -104,29 +106,29 @@ export default class App extends Component {
 
     render(){
 
-      const { saludo, objeto } = this.state;
+      // const { saludo, objeto } = this.state;
 
       return(
 
-        <NavigationContainer>
+      //  <NavigationContainer>
 
-        <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
+        //<SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
 
-        <Text> {saludo} </Text>
+        //<Text> {saludo} </Text>
 
-        <TouchableOpacity onPress={() => this.storageString('Aca va un string')}> 
-          <Text> Guardar Saludo (string) </Text>
-        </TouchableOpacity>
+        //<TouchableOpacity onPress={() => this.storageString('Aca va un string')}> 
+         // <Text> Guardar Saludo (string) </Text>
+        //</TouchableOpacity>
 
-        <Text>  ${objeto.nombre} ${objeto.apellido} </Text>
+        //<Text>  ${objeto.nombre} ${objeto.apellido} </Text>
 
-        <TouchableOpacity onPress={() => this.storageObject({nombre: 'Justo', apellido: 'Mansilla'})}> 
-          <Text> Guardar Nombre (objeto literal)</Text>
-        </TouchableOpacity>
-        
-        </SafeAreaView>
+        //<TouchableOpacity onPress={() => this.storageObject({nombre: 'Justo', apellido: 'Mansilla'})}> 
+         // <Text> Guardar Nombre (objeto literal)</Text>
+        //</TouchableOpacity>
+        <screen_import/>
+       //</SafeAreaView>
 
-        </NavigationContainer>
+        //</NavigationContainer>
 
   
       )
